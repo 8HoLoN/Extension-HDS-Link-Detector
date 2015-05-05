@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Extension HDS Link Detector",
+    "description": "Extension HDS Link Detector",
+    "version": "0.1",
+    "icons": {
+        "128": "/images/logo.png"
+    },
+    "permissions": [
+        "storage",
+        "cookies",
+        "proxy",
+        "contextMenus",
+        "http://*/*",
+        "https://*/*",
+        "ftp://*/*",
+        "tabs",
+        "history",
+        "webRequest",
+        "webRequestBlocking",
+        "clipboardWrite",
+        "clipboardRead",
+        "notifications"
+    ],
+    "browser_action":{
+        "default_icon":"images/hds_disabled.png"
+    },
+    "background": {
+      "page": "/background.html",
+      "persistent":true
+   }
+}
