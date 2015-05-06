@@ -4,7 +4,7 @@
     "description": "Extension HDS Link Detector",
     "version": "0.1",
     "icons": {
-        "128": "/images/logo.png"
+        "64": "/images/logo.png"
     },
     "permissions": [
         "storage",
