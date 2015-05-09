@@ -1,14 +1,13 @@
 ;(function(_g){
     'use strict';
 
-    var manifestUrl = false;
-    var notifications = [];
-
     function HDS(){
         var that = this;
         this.isEnabled=false;
         this.hdsDisabled = 'images/hds_disabled.png';
         this.hdsEnabled = 'images/hds_enabled.png';
+        this.manifestUrl = false;
+        this.notifications = [];
 
         chrome.storage.local.get('isEnabled', function(items) {
             that.isEnabled = (typeof items['isEnabled']!=='undefined'?items['isEnabled']:false);
@@ -29,9 +28,10 @@
             console.log('notificationId click',_notificationId);
 
 
-            console.log(notifications.filter(function(_v){return _v.notificationId==_notificationId;}));
+            console.log("filter",that.notifications.filter(function(_v){return _v.notificationId==_notificationId;}));
 
-            that.copyToClipboard({"text":notifications[_notificationId].command});
+            console.log("plop",that.notifications,that.notifications[_notificationId]);
+            that.copyToClipboard({"text":that.notifications[_notificationId].command});
 
             chrome.notifications.clear(_notificationId, function(_wasCleared){
                 that.openTemporaryWindowToRemoveFocus();
@@ -39,9 +39,9 @@
             });
 
 
-            delete notifications[_notificationId];
+            delete that.notifications[_notificationId];
 
-            Object.keys(notifications).map(function(_i){console.log(_i)});
+            Object.keys(that.notifications).map(function(_i){console.log(_i)});
         });
 
         chrome.webRequest.onBeforeRequest.addListener(function(_details) {
@@ -50,7 +50,7 @@
 
         chrome.webRequest.onBeforeSendHeaders.addListener(function(_details) {
 
-            if ( manifestUrl ){
+            if ( that.manifestUrl ){
                 //console.log(_details.url);
                 var fullUrl = _details.url;
 
@@ -63,7 +63,7 @@
                 if (url.search(/seg\d+\-frag\d+$/i) != -1){
                     console.log('request found',_details);
 
-                    var command = "node AdobeHDS.js --manifest \"" + manifestUrl + "\" --delete";
+                    var command = "node AdobeHDS.js --manifest \"" + that.manifestUrl + "\" --delete";
                     var authParams = false;
 
                     if (fullUrl.indexOf("?") != -1) authParams = fullUrl.substr(fullUrl.indexOf("?") + 1);
@@ -84,7 +84,7 @@
                     // https://developer.chrome.com/apps/notifications
                     // chrome.notifications.create(string notificationId, NotificationOptions options, function callback);
 
-                    notifications.push({
+                    that.notifications.push({
                         'title':title,
                         'message':trimmedCmd,
                         'command':command,
@@ -93,7 +93,7 @@
 
                     that.showNotifications();
 
-                    manifestUrl = false;
+                    that.manifestUrl = false;
                 }
 
             }
@@ -112,7 +112,7 @@
             if (url.indexOf("?") != -1) url = url.substr(0, url.indexOf("?"));
             if (url.search(/\.f4m$/i) != -1){
                 console.log("manifestUrl",_details);
-                manifestUrl = fullUrl;
+                that.manifestUrl = fullUrl;
             }
 
         },{urls: ["<all_urls>"]});
@@ -140,8 +140,8 @@
     }
 
     HDS.prototype.showNotifications = function() {
-
-        notifications.map(function(_v){
+        var that = this;
+        this.notifications.map(function(_v){
 
             if( _v.notificationId==null ){
                 _v.notificationId='';
@@ -157,7 +157,7 @@
                     console.log('notificationId',_notificationId);
                     _v.notificationId=_notificationId;
                     //notifications[_notificationId]={'command':command};
-                    console.log('after',notifications);
+                    console.log('after',that.notifications);
                 });
             }
 
