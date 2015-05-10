@@ -7,3 +7,9 @@ This Chrome extension is an adaptation of the [Firefox add-on](https://addons.mo
 
 ## Basic use
 
+Click the extension icon in the extensions bar to switch between both states.
+>
+<img src="https://raw.githubusercontent.com/8HoLoN/Extension-HDS-Link-Detector/master/images/hds_enabled.png" width="24"> : active
+>
+<img src="https://raw.githubusercontent.com/8HoLoN/Extension-HDS-Link-Detector/master/images/hds_disabled.png" width="24"> : inactive
+
