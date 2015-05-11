@@ -27,11 +27,11 @@
             //chrome.notifications.onClicked.removeListener(_notificationId);
             console.log('notificationId click',_notificationId);
 
-
-            console.log("filter",that.notifications.filter(function(_v){return _v.notificationId==_notificationId;}));
+            var _notification = that.notifications.filter(function(_v){return _v.notificationId==_notificationId;})[0];
+            console.log("filter",_notification);
 
             console.log("plop",that.notifications,that.notifications[_notificationId]);
-            that.copyToClipboard({"text":that.notifications[_notificationId].command});
+            that.copyToClipboard({"text":_notification.command});
 
             chrome.notifications.clear(_notificationId, function(_wasCleared){
                 that.openTemporaryWindowToRemoveFocus();
@@ -39,7 +39,11 @@
             });
 
 
-            delete that.notifications[_notificationId];
+            var _index = that.notifications.indexOf(_notification);
+            delete that.notifications[_index];
+            that.notifications.splice(_index, 1);
+            console.log("bh",_notification)
+
 
             Object.keys(that.notifications).map(function(_i){console.log(_i)});
         });
