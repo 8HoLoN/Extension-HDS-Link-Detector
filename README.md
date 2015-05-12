@@ -13,3 +13,8 @@ Click the extension icon in the extensions bar to switch between both states.
 >
 <img src="https://raw.githubusercontent.com/8HoLoN/Extension-HDS-Link-Detector/master/images/hds_disabled.png" width="24"> : inactive
 
+* Active the extension via the icon
+* Visit a website which embed an HDS video
+* Within few second, a popup show up
+* Click the popup
+* The command line is now copied into your clipboard.
