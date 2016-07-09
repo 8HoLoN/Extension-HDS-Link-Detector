@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Extension HDS Link Detector",
+    "name": "HDS Link Detector",
     "description": "Extension HDS Link Detector",
-    "version": "0.1",
+    "version": "0.0.1",
     "icons": {
         "64": "/images/logo.png"
     },

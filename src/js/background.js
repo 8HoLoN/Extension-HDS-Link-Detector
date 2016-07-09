@@ -4,8 +4,8 @@
     function HDS(){
         var that = this;
         this.isEnabled=false;
-        this.hdsDisabled = 'images/hds_disabled.png';
-        this.hdsEnabled = 'images/hds_enabled.png';
+        this.hdsDisabled = 'images/hds_disabled_128.png';
+        this.hdsEnabled = 'images/hds_enabled_128.png';
         this.manifestUrl = false;
         this.notifications = [];
 
