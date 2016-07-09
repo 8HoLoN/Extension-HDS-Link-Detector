@@ -9,9 +9,9 @@ This Chrome extension is an adaptation of the [Firefox add-on](https://addons.mo
 
 Click the extension icon in the extensions bar to switch between both states.
 >
-<img src="https://raw.githubusercontent.com/8HoLoN/Extension-HDS-Link-Detector/master/images/hds_enabled.png" width="24"> : active
+<img src="https://raw.githubusercontent.com/8HoLoN/Extension-HDS-Link-Detector/master/src/images/hds_enabled.png" width="24"> : active
 >
-<img src="https://raw.githubusercontent.com/8HoLoN/Extension-HDS-Link-Detector/master/images/hds_disabled.png" width="24"> : inactive
+<img src="https://raw.githubusercontent.com/8HoLoN/Extension-HDS-Link-Detector/master/src/images/hds_disabled.png" width="24"> : inactive
 
 * Active the extension via the icon
 * Visit a website which embed an HDS video
