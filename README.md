@@ -23,3 +23,7 @@ Click the extension icon in the extensions bar to switch between both states.
 * Within few seconds, a popup show up
 * Click the popup
 * The command line is now copied into your clipboard.
+
+## Example with [K-S-V](https://github.com/K-S-V) script
+php [AdobeHDS.php](https://raw.githubusercontent.com/K-S-V/Scripts/master/AdobeHDS.php) --manifest "" --delete --auth "" --useragent ""
+

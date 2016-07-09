@@ -67,7 +67,8 @@
                 if (url.search(/seg\d+\-frag\d+$/i) != -1){
                     console.log('request found',_details);
 
-                    var command = "node AdobeHDS.js --manifest \"" + that.manifestUrl + "\" --delete";
+                    var command = "php AdobeHDS.php --manifest \"" + that.manifestUrl + "\" --delete";
+                    //var command = "node AdobeHDS.js --manifest \"" + that.manifestUrl + "\" --delete";
                     var authParams = false;
 
                     if (fullUrl.indexOf("?") != -1) authParams = fullUrl.substr(fullUrl.indexOf("?") + 1);
