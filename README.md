@@ -1,4 +1,4 @@
-# Extension HDS Link Detector
+# Extension HDS Link Detector [Chrome Web Store](https://chrome.google.com/webstore/detail/hds-link-detector/eokdbmimjpcdehjmlcfkhcldagjpkflb)
 Chrome Extension to detect the HDS videos
 
 ## Introduction
