@@ -32,7 +32,7 @@ Click the extension icon in the extensions bar to switch between both states.
 ## Example with [K-S-V](https://github.com/K-S-V) script
 php [AdobeHDS.php](https://raw.githubusercontent.com/K-S-V/Scripts/master/AdobeHDS.php) --manifest "" --delete --auth "" --useragent ""
 
-## Website successfully tested (Not exhaustive list)
+## Websites successfully tested (not exhaustive list)
 * pluzz.fr (pluzz.francetv.fr, etc.)
 * rutube.ru
 * fora.tv
