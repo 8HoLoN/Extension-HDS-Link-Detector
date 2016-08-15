@@ -1,5 +1,7 @@
 # Extension HDS Link Detector
-Chrome Extension to detect the HDS videos
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9LWA3PBZBJ9ZW)
+
+Chrome Extension to detect the HDS videos.
 
 ## Install from the Chrome Web Store
 * https://chrome.google.com/webstore/detail/hds-link-detector/eokdbmimjpcdehjmlcfkhcldagjpkflb
