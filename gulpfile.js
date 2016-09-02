@@ -92,6 +92,7 @@ gulp.task('build.mainStream',['build.clean'], function () { // OK
     return gulp.src(['src/**/*'], { base: "./src/" })
         .pipe(filter(['**/*','!**/*.json']))
         .pipe(filter(['**/*','!**/*.js']))
+        .pipe(filter(['**/*','!**/*_.png']))
         .pipe(filter(['**/*','!src/lib/**/*','!src/lib']))
         .pipe(gulp.dest('build/'));
     //.pipe(stripJsonComments());
