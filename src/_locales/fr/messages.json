@@ -1,0 +1,126 @@
+{
+  "extName": {
+    "message": "We Share Op.",
+    "description": "Nom de l'extension."
+  },
+  "extShortName": {
+    "message": "We Share Op.",
+    "description": "Nom abrégé de l'extension (12 caractères au maximum)"
+  },
+  "extDescription": {
+    "message": "Chrome Extension pour suivre la plus-value des actions dans l'opération \"We Share\".",
+    "description": "Description de l'extension."
+  },
+  // browser_actions
+  // stats
+  "statsTabLabel": {
+    "message": "Statistiques",
+    "description": "Nom de l'onglet statistiques."
+  },
+  "sharesValueLabel": {
+    "message": "Valeur de l'action",
+    "description": "Nom du libellé de la valeur de l'action."
+  },
+  "sharesValueTitle": {
+    "message": "Valeur courante de l'action",
+    "description": "Infobulle pour la valeur de l'action."
+  },
+  "investmentValueLabel": {
+    "message": "Valorisation",
+    "description": "Nom du libellé de la valeur actuelle de l'investissement."
+  },
+  "investmentValueTitle": {
+    "message": "Valeur courante de l'investissement",
+    "description": "Infobulle pour la valeur actuelle de l'investissement."
+  },
+  "capitalGainLabel": {
+    "message": "Plus value",
+    "description": "Nom du libellé de la plus value effectuée."
+  },
+  "capitalGainTitle": {
+    "message": "(Hors taxes et contributions sociales)",
+    "description": "Infobulle pour la plus value effectuée."
+  },
+  "overallGainLabel": {
+    "message": "Bénéfice global",
+    "description": "Nom du libellé de la plus value globale effectuée."
+  },
+  "overallGainTitle": {
+    "message": "(Hors taxes et contributions sociales)",
+    "description": "Infobulle pour la plus value globale effectuée."
+  },
+  // HDS
+  "adobeHdsDownloaderTabLabel": {
+    "message": "Adobe HDS Downloader",
+    "description": "Nom de l'onglet Adobe HDS Downloader."
+  },
+  "amundiAccountTabLabel": {
+    "message": "Connexion à Amundi",
+    "description": "Nom de l'onglet de connexion au compte Amundi."
+  },
+  "phpPathLabel": {
+    "message": "Chemin de \"php\"",
+    "description": "Nom du libellé du chemin de la commande php."
+  },
+  "phpPathPlaceholder": {
+    "message": "e.g. C:\\wamp\\bin\\php\\php5.5.12\\",
+    "description": "Nom du placeholder du chemin de la commande php."
+  },
+  "qualityLevelLabel": {
+    "message": "Niveau de qualité",
+    "description": "Nom du libellé de la qualité du flux."
+  },
+  "qualityLevelPlaceholder": {
+    "message": "Sélectionner un niveau ou saisir le bitrate exact",
+    "description": "Nom du placeholder de la qualité du flux."
+  },
+  // Options
+  "optionsTabLabel": {
+    "message": "Options",
+    "description": "Nom de l'onglet des options."
+  },
+  "activateExtensionLabel": {
+    "message": "Activer l'extension.",
+    "description": "Nom du libellé de l'option pour activer l'extension."
+  },
+  // about
+  "aboutTabLabel": {
+    "message": "À Propos",
+    "description": "Nom de l'onglet à propos."
+  },
+  "versionLabel": {
+    "message": "Version :",
+    "description": "Libellé pour la version de l'extension."
+  },
+  "links": {
+    "message": "Liens :",
+    "description": "Libellé pour la section des liens."
+  },
+  "reviews": {
+    "message": "Évaluer l'extension sur le Chrome Web Store",
+    "description": "Libellé pour l'accès à la page d'évaluation de l'extension sur le Chrome Web Store."
+  },
+  "feedbackLabel": {
+    "message": "Retours, suggestions et erreur de traduction :",
+    "description": "Libellé pour les retours et suggestions."
+  },
+  // modal
+  "loading": {
+    "message": "Chargement…",
+    "description": "Libellé pour le chargement."
+  },
+  "closeModal": {
+    "message": "Fermer",
+    "description": "Libellé pour le bouton de fermeture de la popup."
+  },
+  "numberOfUsers": {
+    "message": "Déjà plus de $numberOfUsers$ utilisateurs !",
+    "description": "Libellé pour le nombre d'utilisateurs.",
+    "placeholders": {
+      "numberOfUsers": {
+        "content": "$1",
+        "example": "23"
+      }
+    }
+  }
+}

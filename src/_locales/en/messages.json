@@ -1,3 +1,122 @@
 {
-
+  "extName": {
+    "message": "We Share Op.",
+    "description": "Extension name."
+  },
+  "extShortName": {
+    "message": "We Share Op.",
+    "description": "Extension short name (maximum 12 characters)"
+  },
+  "extDescription": {
+    "message": "Chrome Extension to track the capital gain of the shares within the \"We Share\" operation.",
+    "description": "Extension description."
+  },
+  // browser_action
+  // stats
+  "statsTabLabel": {
+    "message": "Statistics",
+    "description": "Name of the statistics tab."
+  },
+  "sharesValueLabel": {
+    "message": "Share value",
+    "description": "Name of the label for the value of the share."
+  },
+  "sharesValueTitle": {
+    "message": "Current value of the share",
+    "description": "Tooltip for the share value input."
+  },
+  "investmentValueLabel": {
+    "message": "Investment value",
+    "description": "Name of the label for the value of the investment."
+  },
+  "investmentValueTitle": {
+    "message": "Current value of the investment",
+    "description": "Tooltip for the value of the investment."
+  },
+  "capitalGainLabel": {
+    "message": "Capital gain",
+    "description": "Name of the label for the value of the capital gain."
+  },
+  "capitalGainTitle": {
+    "message": "(Excluding taxes and social security contributions)",
+    "description": "Tooltip for the capital gain input."
+  },
+  "overallGainLabel": {
+    "message": "Overall gain",
+    "description": "Name of the label for the value of the overall capital gain."
+  },
+  "overallGainTitle": {
+    "message": "(Excluding taxes and social security contributions)",
+    "description": "Tooltip for the overall gain input."
+  },
+  // HDS
+  "adobeHdsDownloaderTabLabel": {
+    "message": "Adobe HDS Downloader",
+    "description": "Name of the Adobe HDS Downloader tab."
+  },
+  "phpPathLabel": {
+    "message": "Path for \"php\"",
+    "description": "Name of the php command path label."
+  },
+  "phpPathPlaceholder": {
+    "message": "e.g. C:\\wamp\\bin\\php\\php5.5.12\\",
+    "description": "Name of the php command path placeholder."
+  },
+  "qualityLevelLabel": {
+    "message": "Quality level",
+    "description": "Name of the stream quality label."
+  },
+  "qualityLevelPlaceholder": {
+    "message": "Select quality level or enter exact bitrate",
+    "description": "Name of the stream quality placeholder."
+  },
+  // Options
+  "optionsTabLabel": {
+    "message": "Options",
+    "description": "Name of the options tab."
+  },
+  "activateExtensionLabel": {
+    "message": "Activate the extension.",
+    "description": "Name of the label of the option to activate the extension."
+  },
+  // about
+  "aboutTabLabel": {
+    "message": "About",
+    "description": "Name of the about tab."
+  },
+  "versionLabel": {
+    "message": "Version:",
+    "description": "Label for the extension version."
+  },
+  "links": {
+    "message": "Links:",
+    "description": "Label for links section."
+  },
+  "reviews": {
+    "message": "Rate this extension on the Chrome Web Store",
+    "description": "Link message for the Chrome Web Store reviews page."
+  },
+  "feedbackLabel": {
+    "message": "Feedback, suggestions and mistranslation:",
+    "description": "Label for feedback and suggestions."
+  },
+  // modal
+  "loading": {
+    "message": "Loading…",
+    "description": "Label for the loading."
+  },
+  "closeModal": {
+    "message": "Close",
+    "description": "Label for the modal's close button."
+  },
+  "numberOfUsers": {
+    "message": "Already over $numberOfUsers$ users!",
+    "description": "Label for the number of users.",
+    "placeholders": {
+      "numberOfUsers": {
+        "content": "$1",
+        "example": "23"
+      }
+    }
+  }
 }

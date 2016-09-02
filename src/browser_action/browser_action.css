@@ -1,0 +1,126 @@
+.center{
+    text-align: center;
+}
+.inline-block{
+    display: inline-block;
+}
+.zeroPadding{
+    padding: 0;
+}
+
+/* logo */
+.wso-logo{
+    width: 34px;
+    margin-right: -6px;
+}
+
+/* modal launcher */
+.wso-modalLauncher{
+    margin-top: -3px;
+}
+
+/* quote */
+.wso-quote{
+    position: absolute;
+    bottom: 45px;
+    right: 25px;
+}
+.wso-quote blockquote{
+    margin-bottom: 0;
+}
+
+/* highcharts container */
+.wso-highchartsContainer{
+    height: 303px;
+    width: 100%;
+    line-height: 300px;
+}
+
+body{
+    background-color: snow;/* snow ivory */
+}
+#mainPopup {
+    padding: 10px;
+    height: 350px;
+    width: 650px;/* 767 */
+    font-family: Helvetica, Ubuntu, Arial, sans-serif;
+}
+h1 {
+    font-size: 2em;
+}
+.container{
+    width:100%;
+    _margin:auto;
+}
+/* glyphicon style */
+a.bicon span.glyphicon {
+    font-size: 20px;
+}
+a.bicon{
+    padding: 0px 40px !important;/* 6 16 */
+}
+a.bicon span{
+    line-height: 2.0em !important;/* 25/1.6 20/2.0 30/1.35 */
+}
+/* bullet */
+.custom-bullet li{
+    list-style-type: none;
+}
+.custom-bullet li:before{
+    /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e080";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #CCCCCC;
+}
+/* form */
+.form-horizontal .control-label{
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right;
+}
+.cursor-pointer{
+    cursor:pointer;
+}
+
+.logo-title h1{
+    display: inline-block;
+    text-align: center;
+    font-family: 'Give You Glory';
+    /* font-family: 'Cedarville Cursive'; */
+    /* font-size: 26px; */
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    --line-height: 23px;
+    _background-color: lightgrey;
+    color: white;
+
+    _padding: 5px 60px 5px 60px;
+    _padding: 5px 170px 5px 170px;
+    padding: 10px 170px 0px 170px;
+    margin: 20px;
+    font-size: 2em;
+}
+.logo-title h1:hover{
+    _background-color: lightsteelblue;
+}
+
+/* loading */
+.glyphicon-refresh-animate {
+    -animation: spin 1.7s infinite linear;
+    -webkit-animation: spin2 1.7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}

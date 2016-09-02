@@ -2,10 +2,10 @@
     "manifest_version": 2,
     "name": "HDS Link Detector",
     "description": "Extension HDS Link Detector",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "default_locale": "en",
     "icons": {
-        "64": "/images/logo.png"
+        "64": "/icons/logo_64.png"
     },
     "permissions": [
         "storage",
@@ -24,10 +24,30 @@
         "notifications"
     ],
     "browser_action":{
-        "default_icon":"images/hds_disabled.png"
+        "default_icon":"icons/hds_disabled_128.png",
+        "default_title": "HDS Link Detector",
+        "default_popup": "/browser_action/browser_action.html"
     },
     "background": {
-      "page": "/background.html",
+      "scripts": [
+          "/lib/sjcl/sjcl.min.js",
+          "/class/hds.js",
+          "/class/hds-ws.js",
+          "/class/hds-display.js",
+          "/class/hds-singleton.js",
+          "/bg/background.js"
+      ],
       "persistent":true
-   }
+   },
+  "content_scripts": [
+    {
+      "matches": ["http://*.arte.tv/*"],
+      "js": ["class/a47.js"]
+    },
+    {
+      "matches": ["http://www.francetvinfo.fr/en-direct/tv.html"],
+      "js": ["class/fihdsforce.js"],
+      "run_at": "document_end"
+    }
+  ]
 }

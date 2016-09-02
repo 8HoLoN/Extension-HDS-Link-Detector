@@ -34,6 +34,10 @@ php [AdobeHDS.php](https://raw.githubusercontent.com/K-S-V/Scripts/master/AdobeH
 
 ## Websites successfully tested (not exhaustive list)
 * pluzz.fr (pluzz.francetv.fr, etc.)
+* Franceinfo
+    * video (http://www.francetvinfo.fr/images/videos/)
+    * live (http://www.francetvinfo.fr/en-direct/tv.html)
+        * video and sound are separated (set bitrate to 65 for sound)
 * rutube.ru
 * fora.tv
 * nrk.no
