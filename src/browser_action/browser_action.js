@@ -51,6 +51,14 @@
 			return d;
 		});
 
+		// show switch
+		$("#wso-activateExtension").bootstrapSwitch({
+			onSwitchChange : function(event, state) {
+                HDS.switchExtensionActivation(state);
+			}
+		});
+
+
 		// show modal
 		$('#wso-modal').on('show.bs.modal', function (e) {
 			console.log("show");

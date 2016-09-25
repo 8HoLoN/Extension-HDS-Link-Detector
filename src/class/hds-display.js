@@ -40,6 +40,7 @@
         _gEBI('wso-activateExtension').checked = this.isEnabled;
         _gEBI('wso-phpPath').value = this.userData.hds.phpPath;
         _gEBI('wso-qualityLevel').value = this.userData.hds.qualityLevel;
+        _gEBI('wso-outputUrlOnly').checked = this.userData.options.outputManifestUrlOnly;
     };
 
 })(HDS);

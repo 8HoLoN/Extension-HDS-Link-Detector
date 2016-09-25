@@ -83,6 +83,10 @@
     "message": "Activer l'extension.",
     "description": "Nom du libellé de l'option pour activer l'extension."
   },
+  "outputUrlOnlyLabel": {
+    "message": "Copier uniquement l'url du manifest dans le presse-papiers.",
+    "description": "Nom du libellé de l'option pour copier uniquement l'url du manifest dans le presse-papiers."
+  },
   // about
   "aboutTabLabel": {
     "message": "À Propos",

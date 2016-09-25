@@ -15,6 +15,9 @@
             hds : {
                 phpPath: '',
                 qualityLevel: ''
+            },
+            options : {
+                outputManifestUrlOnly: false
             }
         };
 
@@ -84,6 +87,9 @@
                     }
                     if( this.userData.hds.qualityLevel ){
                         _command += " --quality " + this.userData.hds.qualityLevel;
+                    }
+                    if( this.userData.options.outputManifestUrlOnly ){
+                        _command = this.manifestUrl;
                     }
                     //console.log(command);
 
@@ -297,6 +303,7 @@
         var _userData = JSON.parse(sjcl.decrypt("hld"+chrome.runtime.id,_items.hldUserData));
         this.userData.hds.phpPath = _userData.hds.phpPath;
         this.userData.hds.qualityLevel = _userData.hds.qualityLevel;
+        this.userData.options.outputManifestUrlOnly = _userData.options.outputManifestUrlOnly;
     };
 
     /**
@@ -308,6 +315,12 @@
             console.log('saveError',chrome.runtime.lastError);
             //chrome.runtime.id
         });
+    };
+
+    HDS.prototype.switchExtensionActivation = function(_state) {
+        this.isEnabled = _state;
+        this.manifestUrl = false;
+        this.updateIcon();
     };
 
     HDS.prototype.browserAction = function(_window){
@@ -342,12 +355,11 @@
         });
 
         _gEBI('wso-activateExtension').addEventListener('change',function(){
-            that.isEnabled = this.checked;
-            that.manifestUrl = false;
-            that.updateIcon();
-            //that.userData.options.showOverallGainOnBadge = this.checked;
-            //that.saveData();
-            //that.displayBadgeText();
+            that.switchExtensionActivation(this.checked);
+        });
+        _gEBI('wso-outputUrlOnly').addEventListener('change',function(){
+            that.userData.options.outputManifestUrlOnly = this.checked;
+            that.saveData();
         });
 
         this.getNumberOfUsers()

@@ -79,6 +79,10 @@
     "message": "Activate the extension.",
     "description": "Name of the label of the option to activate the extension."
   },
+  "outputUrlOnlyLabel": {
+    "message": "Output only the manifest url into the clipboard.",
+    "description": "Name of the label of the option to output only the manifest url into the clipboard."
+  },
   // about
   "aboutTabLabel": {
     "message": "About",

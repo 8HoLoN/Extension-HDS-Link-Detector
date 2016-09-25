@@ -101,8 +101,9 @@ a.bicon span{
 
     _padding: 5px 60px 5px 60px;
     _padding: 5px 170px 5px 170px;
-    padding: 10px 170px 0px 170px;
-    margin: 20px;
+    _padding: 10px 170px 0px 170px;
+    padding: 10px 182px 0px 182px;
+    margin-bottom: 20px;
     font-size: 2em;
 }
 .logo-title h1:hover{
