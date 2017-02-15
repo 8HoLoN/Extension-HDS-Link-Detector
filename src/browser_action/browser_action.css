@@ -41,7 +41,7 @@ body{
 }
 #mainPopup {
     padding: 10px;
-    height: 350px;
+    _height: 350px;
     width: 650px;/* 767 */
     font-family: Helvetica, Ubuntu, Arial, sans-serif;
 }
