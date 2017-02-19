@@ -37,7 +37,8 @@
     HDS.prototype.getNumberOfUsers = function(){
         return this.asyncSend('https://chrome.google.com/webstore/detail/eokdbmimjpcdehjmlcfkhcldagjpkflb')
             .then(_xhr=>{
-                var _numberOfUsers = _xhr.responseText.match(/UserDownloads:([0-9]*)/)[1];
+                //var _numberOfUsers = _xhr.responseText.match(/UserDownloads:([0-9]*)/)[1];
+                var _numberOfUsers = _xhr.responseText.match(/UserDownloads:(.*?)"/)[1];
                 //console.log(_numberOfUsers);
                 return _numberOfUsers;
             })
