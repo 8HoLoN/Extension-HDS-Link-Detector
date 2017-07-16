@@ -149,7 +149,7 @@
         var that = this;
         chrome.storage.local.get('isEnabled', _items =>{
             this.isEnabled = (typeof _items['isEnabled']!=='undefined'?_items['isEnabled']:false);
-            this.updateIcon();
+            this.updateIcon(true);
         });
 
         chrome.storage.local.set({hldVersion:this.version},()=>{
@@ -268,7 +268,7 @@
         });
     };
 
-    HDS.prototype.updateIcon = function() {
+    HDS.prototype.updateIcon = function(_hideNotificatioin) {
         chrome.storage.local.set({ 'isEnabled': this.isEnabled });
         if( this.hdsStateNotificationId )chrome.notifications.clear(this.hdsStateNotificationId);
 
@@ -280,16 +280,19 @@
         };
 
         chrome.browserAction.setIcon({path: _state.icon[_stateIt]});
-        this.createNotification({
-            title: _state.title[_stateIt],
-            message: _state.message[_stateIt],
-            iconUrl: _state.icon[_stateIt],
-            isClickable: false,
-            requireInteraction: false
-        }).then( _notificationId => {
-            this.hdsStateNotificationId = _notificationId;
-            console.log('notificationId',_notificationId);
-        });
+        if( !_hideNotificatioin ){
+            this.createNotification({
+                title: _state.title[_stateIt],
+                message: _state.message[_stateIt],
+                iconUrl: _state.icon[_stateIt],
+                isClickable: false,
+                requireInteraction: false
+            }).then( _notificationId => {
+                this.hdsStateNotificationId = _notificationId;
+                console.log('notificationId',_notificationId);
+            });
+        }
+
     };
 
     /**
